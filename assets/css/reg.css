@@ -1,0 +1,14 @@
+body {
+ 	padding-top: 50px;
+}
+.starter-template {
+  	padding: 40px 15px;
+  	text-align: center;
+}
+.thumbnail_home{
+ 	padding:7px 13px 7px 13px;
+ 	height:235px
+}
+.no_margin{
+ 	margin:0px !important;
+}

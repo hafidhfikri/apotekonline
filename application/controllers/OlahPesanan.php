@@ -1,0 +1,33 @@
+<?php
+/**
+ * Created by Notepad++.
+ * User: Zulfikar Fauzi
+ * Date: 11/10/2016
+ * Time: 8:00 AM
+ */
+class OlahPesanan extends CI_Controller {
+
+    function __construct(){
+        parent::__construct();
+    }
+
+    public function index($msg = NULL){
+        $data['msg'] = $msg;
+        $this->load->view('formOlahPesanan',$data);
+    }
+
+    public function lihatPesanan($idPesanan){
+        $this->load->model('PesananModel');
+        $result = $this->PesananModel->getPesanan($idPesanan);
+    }
+    public function lihatListPesanan(){
+        $this->load->model('PesananModel');
+        $result = $this->PesananModel->getAllPesanan();
+    }
+    public function ubahStatusPesanan($idPesanan,$idMember,$Status){
+        $this->load->model('PesananModel');
+        $result = $this->PesananModel->editStatusPesanan($idPesanan,$idMember,$Status);
+    }
+
+}
+?>
